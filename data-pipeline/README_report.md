@@ -44,6 +44,8 @@ Contains data for:
 
 We use a Metabase dashboard to monitor various metrics related to both the data and its quality.
 
+[Docker compose for Metabase](./../docker/docker-compose-base.yaml)
+
 For the training data, we display key metrics such as the number of distinct users and the average number of user-blocks per user.
 A `user-block` is defined as a triplet: `(user_id, playlist_id_positive, playlist_id_negative_list)`. Each user-block groups together entries by user_id and their preferred `playlist_id_positive`, along with a list of `playlist_id_negative` values. These negative playlist IDs represent alternatives that the user preferred less than the positive one.
 To ensure the integrity and consistency of our training data, we validate that each `user-block` contains only one `playlist_id_positive` per `(user_id, playlist_id_positive)` combination.
